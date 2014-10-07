@@ -1,0 +1,12 @@
+{
+  "name": "cold-beer",
+  "description": "Is it cold enough to cool my beer?",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x",
+    "jade": "^1.7.0",
+    "request": "2.44.x",
+    "body-parser": "1.9.x"
+  }
+}
