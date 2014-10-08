@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-  $("#yes").on("click", function(){
+  $("#yes").on("click", function(event){
+    event.preventDefault();
     $("#introcold").hide();
     cl.show();
     getLocation();
