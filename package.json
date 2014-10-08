@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "4.x",
     "request": "2.44.x",
-    "compression": "1.1.x"
+    "compression": "1.1.x",
+    "body-parser": "1.9.x"
   }
 }
