@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
 var request = require('request');
-app.use(express.compress());
+var compress = require('compression');
+app.use(compress());
 
 app.use(express.static(__dirname + '/public'));
 app.set('views','views/');
