@@ -57,7 +57,7 @@ function getLocation(){
 }
 function showLocation(p){
   $.ajax({
-    url: 'http://localhost:3000/zip',
+    url: 'http://localhost:5000/zip',
     type: 'POST',
     cache: 'FALSE',
     data: { lat: p.coords.latitude, long: p.coords.longitude},
@@ -76,7 +76,7 @@ function showLocation(p){
 
 function getTemp(c,s){
   $.ajax({
-    url: 'http://localhost:3000/temperature',
+    url: 'http://localhost:5000/temperature',
     type: 'POST',
     cache: 'FALSE',
     data: { city: c, state: s},
