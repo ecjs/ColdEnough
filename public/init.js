@@ -68,8 +68,8 @@ function showLocation(p){
       getTemp(data.city,data.state);
       console.log("process success");
     },
-    error: function(){
-      console.log("process error");
+    error: function(error){
+      console.log("process error" + error);
     }
   });
 }
@@ -94,8 +94,8 @@ function getTemp(c,s){
         $("#introcold").fadeIn();
       }
     },
-    error: function(){
-      console.log("process error");
+    error: function(error){
+      console.log("process error" + error);
     }
   });
 }

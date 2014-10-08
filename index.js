@@ -1,15 +1,8 @@
 var express = require('express');
 var app = express();
 var request = require('request');
-var compress = require('compression');
-
-app.all('/', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
- });
- 
-app.use(compress());
+var bodyParser = require('body-parser');
+app.use(bodyParser());
 
 app.use(express.static(__dirname + '/public'));
 app.post('/zip', function(req,res){
@@ -37,10 +30,6 @@ app.post('/temperature', function(req,res){
     console.log(getIT.current_observation.temp_f);
     res.send({temp: getIT.current_observation.temp_f});
   });
-});
-
-app.get('/', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!'});
 });
 
 var server = app.listen(process.env.PORT || 5000, function(){
