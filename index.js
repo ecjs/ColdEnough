@@ -5,9 +5,6 @@ var compress = require('compression');
 app.use(compress());
 
 app.use(express.static(__dirname + '/public'));
-app.set('views','views/');
-app.set('view engine', 'jade');
-app.use(bodyParser.urlencoded({ extended: false }));
 app.post('/zip', function(req,res){
   request({
     uri: "http://api.wunderground.com/api/76009aee6e359b00/geolookup/q/" + req.body.lat + "," + req.body.long + ".json",
