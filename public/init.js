@@ -57,7 +57,7 @@ function getLocation(){
 }
 function showLocation(p){
   $.ajax({
-    url: 'http://localhost/zip',
+    url: 'http://thawing-beach-3084.herokuapp.com/zip',
     type: 'POST',
     cache: 'FALSE',
     data: { lat: p.coords.latitude, long: p.coords.longitude},
@@ -76,7 +76,7 @@ function showLocation(p){
 
 function getTemp(c,s){
   $.ajax({
-    url: 'http://localhost/temperature',
+    url: 'http://thawing-beach-3084.herokuapp.com/temperature',
     type: 'POST',
     cache: 'FALSE',
     data: { city: c, state: s},
