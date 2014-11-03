@@ -7,7 +7,7 @@ app.use(bodyParser());
 app.use(express.static(__dirname + '/public'));
 app.post('/zip', function(req,res){
   request({
-    uri: "http://api.wunderground.com/api/76009aee6e359b00/geolookup/q/" + req.body.lat + "," + req.body.long + ".json",
+    uri: "http://api.wunderground.com/api/" + process.env.WUAPI_KEY + "/geolookup/q/" + req.body.lat + "," + req.body.long + ".json",
     method: "GET",
     timeout: 10000,
     followRedirect: true,
@@ -20,7 +20,7 @@ app.post('/zip', function(req,res){
 
 app.post('/temperature', function(req,res){
   request({
-    uri: "http://api.wunderground.com/api/76009aee6e359b00/conditions/q/" + req.body.state + "/" + req.body.city + ".json",
+    uri: "http://api.wunderground.com/api/" + process.env.WUAPI_KEY + "/conditions/q/" + req.body.state + "/" + req.body.city + ".json",
     method: "GET",
     timeout: 10000,
     followRedirect: true,
