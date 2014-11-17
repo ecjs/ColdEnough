@@ -3,6 +3,9 @@
   "description": "Is it cold enough to cool my beer?",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+  "test": "grunt test"
+  },
   "devDependencies": {
     "chai": "^1.10.0",
     "grunt": "^0.4.5",
