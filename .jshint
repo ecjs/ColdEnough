@@ -1,0 +1,11 @@
+{
+  "globals": {
+  },
+  "node": true,
+  "indent": 2,
+  "globalstrict" : true,
+  "quotmark": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true
+}
