@@ -4,12 +4,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-  "test": "grunt test"
+    "test": "grunt test"
   },
   "devDependencies": {
     "chai": "^1.10.0",
     "grunt": "^0.4.5",
+    "grunt-browserify": "^3.2.1",
     "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.8.1",
     "grunt-jscs": "^0.8.1",
     "grunt-simple-mocha": "^0.4.0"
   },
@@ -17,6 +19,7 @@
     "body-parser": "1.9.x",
     "compression": "1.1.x",
     "express": "4.x",
+    "grunt-browserify": "^3.2.1",
     "request": "2.44.x"
   }
 }
