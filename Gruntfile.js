@@ -24,7 +24,7 @@ module.exports = function(grunt) {
           debug: true
         },
         src: ['public/js/**/*.js'],
-        dest: 'bundle.js'
+        dest: 'public/bundle.js'
       }
     },
 
@@ -33,5 +33,5 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('test', ['jshint', 'jscs', 'grunt-browserify', 'simplemocha']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'browserify', 'simplemocha']);
 };
