@@ -30,7 +30,6 @@ app.post('/temperature', function(req, res) {
     maxRedirects: 10
   }, function(error, response, body) {
     var getIT = JSON.parse(body);
-    console.log(getIT.current_observation.temp_f);
     res.send({temp: getIT.current_observation.temp_f});
   });
 });
