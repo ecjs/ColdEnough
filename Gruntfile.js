@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-jscs');
+  grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-simple-mocha');
 
   grunt.initConfig({
@@ -17,11 +18,20 @@ module.exports = function(grunt) {
         config: '.jscsrc'
       }
     },
+    browserify: {
+      dev: {
+        options: {
+          debug: true
+        },
+        src: ['public/js/**/*.js'],
+        dest: 'public/bundle.js'
+      }
+    },
 
     simplemocha: {
       src: ['test/**/*.js']
     }
   });
 
-  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'browserify', 'simplemocha']);
 };
